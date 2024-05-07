@@ -30,7 +30,7 @@ Include fixed point for stratus because stratus HLS not support C++ flaot/double
 Testbench.cpp<br>
 Using the fixed point.
 ```cpp
-	sc_fixed_fast<23,17> total;
+    sc_fixed_fast<23,17> total;
 ```
 SobelFilter.h<br>
 Include fixed point for stratus 
