@@ -1,0 +1,42 @@
+--------------------
+Testbench.cpp
+81
+    double total
+
+    改成 double result = (int)(std::sqrt(total));
+
+147
+    if(x == 0 || x+u == x+2) 
+--------------------
+SobelFilter.cpp
+6~9
+    /// for buffer
+    #include <iostream>
+    const int SIZE = 25;
+    double buffer[SIZE];
+
+    int x = 0, y = 0;
+    double grey = 0;
+
+    // Gaussian Blur Filter
+    const int mask[MASK_N][MASK_X][MASK_Y] = {{{1, 4, 7, 4, 1},
+                                                {4, 16, 26, 16, 4},
+                                                {7, 26, 41, 26, 7},
+                                                {4, 16, 26, 16, 4},
+                                                {1, 4, 7, 4, 1}}};
+  
+    double grey = (rgb.range(7,0) + rgb.range(15,8) + rgb.range(23, 16))/3;
+    
+    val[i] += grey * (mask[i][u][v]/273);
+
+    double total
+--------------------
+SobelFilter.h
+30  
+    val[MASK_N];
+    改成 double val[MASK_N];
+
+
+--------------------
+filter_def.h
+    改成1、5、5

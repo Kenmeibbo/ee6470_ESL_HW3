@@ -1,0 +1,11 @@
+SobelFilter.cpp
+
+88
+	buffer[u+(v<<2)+v]=buffer[u+(v<<2)+v+1];
+92
+	if (x == 0 && y == 0) buffer[u+(v<<2)+v] = grey;
+95
+	else if (u != MASK_X - 1 && x != 0) grey = buffer[u+(v<<2)+v];
+98
+	else if (u == MASK_X - 1) buffer[u+(v<<2)+v] = grey;
+
